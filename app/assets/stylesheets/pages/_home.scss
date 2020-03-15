@@ -1,1 +1,28 @@
 // Specific CSS for your home-page
+
+.home-banner {
+  // background-image: url('home_banner2.jpg');
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  //text-align: left;
+  padding-top: 40vh;
+  position: relative;
+}
+
+.card-home {
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 16px 40px;
+  padding: 25px;
+  width: 441px;
+  justify-content: center;
+  top: 200px;
+  right: 150px;
+
+  h2{
+    color: rgb(72, 72, 72);
+    font-weight: bold;
+  }
+}
