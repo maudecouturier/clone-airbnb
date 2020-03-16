@@ -5,4 +5,18 @@ class FlatsController < ApplicationController
   #   authorize @flats
   # end
 
+
+  def index
+
+    @flats = Flat.all
+
+    @flats = Flat.geocoded
+
+     @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
+  end
 end

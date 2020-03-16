@@ -5,5 +5,5 @@ class Flat < ApplicationRecord
   has_many :bookings, dependent: :destroy #to be reviewed -status to cancel instead
   has_many :reviews, through: :bookings
 
-  validates :title, :location, :travelers, presence: true
+  validates :title, :location, :traveler, presence: true
 end
