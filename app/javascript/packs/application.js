@@ -25,5 +25,25 @@ require("channels")
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initAutocomplete } from '../plugins/init_autocomplete';
+import flatpickr from "flatpickr";
 
 initMapbox();
+initAutocomplete();
+
+document.addEventListener('turbolinks:load', () => {
+
+  if (document.querySelector('#map')) initMapbox();
+  if (document.querySelector('#flat_location')) initAutocomplete();
+  if (document.querySelector("#flatpickr")) flatpickr("#flatpickr", {});
+
+  if (document.querySelector('#sweet-alert-demo')) {
+    initSweetalert('#sweet-alert-demo', {
+      title: "Thank you for your booking",
+      buttons: false,
+      timer: 12000,
+      text: "Check the status of your booking on your dashboard",
+      icon: "success"
+    });
+  }
+})
