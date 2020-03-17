@@ -5,8 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.destroy_all
 Flat.destroy_all
+
+
+
+user1 = User.create([{ email: 'lala@nomail.com' }])
+user2 = User.create([{ email: 'coucou@nomail.com' }])
+
 
 file1 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1584362985/aflkm7psoqdmufmdrkwz.jpg")
 file2 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1584362981/lyiigsakjzebitlhu3fv.jpg")
